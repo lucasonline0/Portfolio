@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="!scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Lucas Andrade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#121212",
+            surface: "#1E1E1E",
+            primary: "#9370DB",
+            "primary-hover": "#A380E8",
+            "text-primary": "#E0E0E0",
+            "text-secondary": "#A0A0A0",
+            "border-color": "#2D2D2D",
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+          },
+          boxShadow: {
+            primary: "0 4px 14px 0 rgba(147, 112, 219, 0.3)",
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-background text-text-primary font-poppins">
+  <header id="navbar"
+    class="fixed top-0 left-0 w-full bg-background/80 backdrop-blur-lg border-b border-transparent z-50 transition-all duration-300">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold text-primary">LA.</a>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#home" class="nav-link text-text-secondary hover:text-primary transition-colors">Início</a>
+        <a href="#about" class="nav-link text-text-secondary hover:text-primary transition-colors">Sobre</a>
+        <a href="#skills" class="nav-link text-text-secondary hover:text-primary transition-colors">Skills</a>
+        <a href="#projects" class="nav-link text-text-secondary hover:text-primary transition-colors">Projetos</a>
+        <a href="#contact" class="nav-link text-text-secondary hover:text-primary transition-colors">Contato</a>
+      </nav>
+      <button id="mobile-menu-button" class="md:hidden" aria-label="Abrir menu">
+        <i data-feather="menu" class="text-text-primary"></i>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobile-menu"
+    class="fixed top-0 right-0 h-full w-64 bg-surface transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden">
+    <div class="p-6 flex flex-col space-y-6">
+      <button id="close-menu-button" class="self-end" aria-label="Fechar menu">
+        <i data-feather="x" class="text-text-primary"></i>
+      </button>
+      <a href="#home" class="nav-link-mobile text-text-secondary hover:text-primary transition-colors">Início</a>
+      <a href="#about" class="nav-link-mobile text-text-secondary hover:text-primary transition-colors">Sobre</a>
+      <a href="#skills" class="nav-link-mobile text-text-secondary hover:text-primary transition-colors">Skills</a>
+      <a href="#projects" class="nav-link-mobile text-text-secondary hover:text-primary transition-colors">Projetos</a>
+      <a href="#contact" class="nav-link-mobile text-text-secondary hover:text-primary transition-colors">Contato</a>
+    </div>
+  </div>
+
+  <div id="social-bar" class="fixed bottom-0 left-8 hidden lg:flex flex-col items-center space-y-6 z-10 transition-all duration-300 ease-in-out">
+    <a href="https://github.com/lucasonline0" target="_blank" rel="noopener noreferrer"
+      class="text-text-secondary hover:text-primary transition-colors"><i data-feather="github"></i></a>
+    <a href="https://www.linkedin.com/in/lucasblackstar/" target="_blank" rel="noopener noreferrer"
+      class="text-text-secondary hover:text-primary transition-colors"><i data-feather="linkedin"></i></a>
+    <a href="https://dev.to/lucasonline0" target="_blank" rel="noopener noreferrer"
+      class="text-text-secondary hover:text-primary transition-colors"><i data-feather="edit-3"></i></a>
+    <a href="mailto:jlmadureira90@gmail.com"
+      class="text-text-secondary hover:text-primary transition-colors"><i data-feather="mail"></i></a>
+    <div class="w-px h-24 bg-text-secondary mt-6"></div>
+  </div>
+
+  <a href="#home" id="back-to-top-button" aria-label="Voltar ao topo"
+    class="fixed bottom-8 left-8 hidden lg:block p-3 bg-surface rounded-full shadow-lg opacity-0 -translate-y-8 transition-all duration-300 ease-in-out hover:bg-primary group">
+    <i data-feather="arrow-up" class="text-text-secondary group-hover:text-white"></i>
+  </a>
+
+  <main class="max-w-5xl mx-auto px-6">
+    <section id="home" class="min-h-screen flex flex-col justify-center items-start">
+      <div class="reveal">
+        <p class="text-primary text-lg mb-2">Olá, meu nome é</p>
+        <h1 id="github-name" class="text-5xl md:text-7xl font-black text-text-primary mb-3">
+          Lucas Andrade
+        </h1>
+        <h2 class="text-3xl md:text-5xl font-bold text-text-secondary mb-6">
+          Desenvolvedor de Software | Cibersegurança
+        </h2>
+        <p id="github-bio" class="max-w-xl text-text-secondary">
+          Carregando biografia do GitHub...
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="py-20">
+      <div class="reveal">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+          Sobre Mim
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+          <div class="md:col-span-3 text-text-secondary space-y-4">
+            <p>
+              Sou de Belém, Pará, e atualmente estou cursando <span class="text-primary font-medium">Ciência da Computação</span>. Minha jornada na
+              programação começou com um fascínio por como as ideias se transformam em soluções digitais interativas e
+              funcionais.
+            </p>
+            <p>
+              Sou um desenvolvedor <span class="text-primary font-medium">Full-Stack</span> com conhecimento em diversas tecnologias. Meu principal foco e plano de carreira é a área de
+              <span class="text-primary font-medium">Cibersegurança</span>, onde busco aplicar as melhores práticas para construir soluções seguras e robustas.
+            </p>
+            <p>
+              Quando não estou codificando, dedico meu tempo à leitura, jogos e ao estudo contínuo para aprimorar minhas habilidades.
+            </p>
+          </div>
+          <div class="md:col-span-2 flex justify-center md:justify-end">
+            <div class="image-wrapper w-64 h-64 md:w-72 md:h-72">
+              <img id="profile-pic" src="assets/profile.jpg" alt="Foto de perfil de Lucas Andrade"
+                class="rounded-lg w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-20">
+      <div class="reveal">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+          Skills
+        </h2>
+        <div class="grid grid-cols-4 md:grid-cols-6 gap-6 justify-items-center">
+          <div
+            class="skill-block w-28 h-28 bg-surface border border-border-color rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-primary">
+            <i class="devicon-javascript-plain text-5xl text-text-secondary"></i>
+          </div>
+          <div
+            class="skill-block w-28 h-28 bg-surface border border-border-color rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-primary">
+            <i class="devicon-typescript-plain text-5xl text-text-secondary"></i>
+          </div>
+          <div
+            class="skill-block w-28 h-28 bg-surface border border-border-color rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-primary">
+            <i class="devicon-react-original text-5xl text-text-secondary"></i>
+          </div>
+          <div
+            class="skill-block w-28 h-28 bg-surface border border-border-color rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-primary">
+            <i class="devicon-nodejs-plain text-5xl text-text-secondary"></i>
+          </div>
+          <div
+            class="skill-block w-28 h-28 bg-surface border border-border-color rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-primary">
+            <i class="devicon-python-plain text-5xl text-text-secondary"></i>
+          </div>
+          <div
+            class="skill-block w-28 h-28 bg-surface border border-border-color rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-primary">
+            <i class="devicon-java-plain text-5xl text-text-secondary"></i>
+          </div>
+          <div
+            class="skill-block w-28 h-28 bg-surface border border-border-color rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-primary">
+            <i class="devicon-html5-plain text-5xl text-text-secondary"></i>
+          </div>
+          <div
+            class="skill-block w-28 h-28 bg-surface border border-border-color rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-primary">
+            <i class="devicon-css3-plain text-5xl text-text-secondary"></i>
+          </div>
+          <div
+            class="skill-block w-28 h-28 bg-surface border border-border-color rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-primary">
+            <i class="devicon-tailwindcss-plain text-5xl text-text-secondary"></i>
+          </div>
+          <div
+            class="skill-block w-28 h-28 bg-surface border border-border-color rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-primary">
+            <i class="devicon-mysql-plain text-5xl text-text-secondary"></i>
+          </div>
+          <div
+            class="skill-block w-28 h-28 bg-surface border border-border-color rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-primary">
+            <i class="devicon-git-plain text-5xl text-text-secondary"></i>
+          </div>
+          <div
+            class="skill-block w-28 h-28 bg-surface border border-border-color rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-primary">
+            <i class="devicon-c-plain text-5xl text-text-secondary"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-20">
+      <div class="reveal">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+          Projetos
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="project-card bg-surface rounded-lg overflow-hidden flex flex-col">
+            <div class="p-6 flex-grow flex flex-col">
+              <div class="flex justify-between items-center mb-4">
+                <i data-feather="folder" class="text-primary"></i>
+                <div class="project-links space-x-4">
+                  <a href="#" class="text-text-secondary hover:text-primary"><i data-feather="github"></i></a>
+                </div>
+              </div>
+              <h3 class="project-title text-xl font-bold mb-2 text-text-primary">Calop Agender</h3>
+              <p class="project-description text-text-secondary flex-grow mb-4">
+                Aplicação Full-Stack para agendamento em barbearias, com app para clientes e dashboard para
+                administradores.
+              </p>
+              <div class="project-tags flex flex-wrap gap-2 text-sm text-text-secondary">
+                <span>React Native</span>
+                <span>SQLite</span>
+                <span>Expo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card bg-surface rounded-lg overflow-hidden flex flex-col">
+            <div class="p-6 flex-grow flex flex-col">
+              <div class="flex justify-between items-center mb-4">
+                <i data-feather="folder" class="text-primary"></i>
+                <div class="project-links space-x-4">
+                  <a href="#" class="text-text-secondary hover:text-primary"><i data-feather="github"></i></a>
+                </div>
+              </div>
+              <h3 class="project-title text-xl font-bold mb-2 text-text-primary">Duck Manager</h3>
+              <p class="project-description text-text-secondary flex-grow mb-4">
+                Sistema desktop para gerenciamento de vendas e estoque, com interface intuitiva e relatórios
+                detalhados.
+              </p>
+              <div class="project-tags flex flex-wrap gap-2 text-sm text-text-secondary">
+                <span>Java</span>
+                <span>MySQL</span>
+                <span>HTML/CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card bg-surface rounded-lg overflow-hidden flex flex-col">
+            <div class="p-6 flex-grow flex flex-col">
+              <div class="flex justify-between items-center mb-4">
+                <i data-feather="folder" class="text-primary"></i>
+                <div class="project-links space-x-4">
+                  <a href="#" class="text-text-secondary hover:text-primary"><i data-feather="github"></i></a>
+                </div>
+              </div>
+              <h3 class="project-title text-xl font-bold mb-2 text-text-primary">Cofre de Senhas</h3>
+              <p class="project-description text-text-secondary flex-grow mb-4">
+                Ferramenta segura para armazenamento local de senhas, utilizando criptografia para proteger os dados do
+                usuário.
+              </p>
+              <div class="project-tags flex flex-wrap gap-2 text-sm text-text-secondary">
+                <span>Python</span>
+                <span>CustomTkinter</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card bg-surface rounded-lg overflow-hidden flex flex-col">
+            <div class="p-6 flex-grow flex flex-col">
+              <div class="flex justify-between items-center mb-4">
+                <i data-feather="folder" class="text-primary"></i>
+                <div class="project-links space-x-4">
+                  <a href="https://github.com/amazonext/LogFlux" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-primary"><i data-feather="github"></i></a>
+                </div>
+              </div>
+              <h3 class="project-title text-xl font-bold mb-2 text-text-primary">LogFlux</h3>
+              <p class="project-description text-text-secondary flex-grow mb-4">
+                Analisador de logs com interface web que transforma arquivos de syslog em insights visuais, permitindo upload e busca detalhada.
+              </p>
+              <div class="project-tags flex flex-wrap gap-2 text-sm text-text-secondary">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card bg-surface rounded-lg overflow-hidden flex flex-col">
+            <div class="p-6 flex-grow flex flex-col">
+              <div class="flex justify-between items-center mb-4">
+                <i data-feather="folder" class="text-primary"></i>
+                <div class="project-links space-x-4">
+                  <a href="https://github.com/lucasonline0/Network_Monitor_IA" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-primary"><i data-feather="github"></i></a>
+                </div>
+              </div>
+              <h3 class="project-title text-xl font-bold mb-2 text-text-primary">Network Monitor IA</h3>
+              <p class="project-description text-text-secondary flex-grow mb-4">
+                Plataforma de monitoramento de rede com IA para detectar padrões suspeitos como ataques DDoS e anomalias em tempo real.
+              </p>
+              <div class="project-tags flex flex-wrap gap-2 text-sm text-text-secondary">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>AI/ML</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card bg-surface rounded-lg overflow-hidden flex flex-col">
+            <div class="p-6 flex-grow flex flex-col">
+              <div class="flex justify-between items-center mb-4">
+                <i data-feather="folder" class="text-primary"></i>
+                <div class="project-links space-x-4">
+                  <a href="https://github.com/lucasonline0/Devsecops-Orchestrator" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-primary"><i data-feather="github"></i></a>
+                </div>
+              </div>
+              <h3 class="project-title text-xl font-bold mb-2 text-text-primary">DevSecOps Orchestrator</h3>
+              <p class="project-description text-text-secondary flex-grow mb-4">
+                Pipeline CI/CD com GitHub Actions que escaneia código Python em busca de vulnerabilidades, dependências e segredos expostos.
+              </p>
+              <div class="project-tags flex flex-wrap gap-2 text-sm text-text-secondary">
+                <span>GitHub Actions</span>
+                <span>Python</span>
+                <span>DevSecOps</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 text-center">
+      <div class="reveal">
+        <h2 class="text-2xl md:text-3xl font-bold text-text-secondary mb-2">
+          Qual o próximo passo?
+        </h2>
+        <h3 class="text-4xl md:text-5xl font-black text-text-primary mb-6">Entre em Contato</h3>
+        <p class="max-w-2xl mx-auto text-text-secondary mb-8">
+          Estou sempre aberto a novas oportunidades e colaborações. Se você tem um projeto em mente, uma pergunta ou
+          apenas quer dizer um "oi", minha caixa de entrada está sempre aberta.
+        </p>
+        <a href="mailto:jlmadureira90@gmail.com"
+          class="inline-block bg-primary text-white font-bold py-4 px-8 rounded-lg hover:bg-primary-hover transition-colors duration-300">
+          Diga Olá
+        </a>
+      </div>
+    </section>
+    <footer class="text-center py-6 text-text-secondary text-sm">
+      <p>
+        Projetado e Construído por Lucas Andrade &copy; <span id="current-year"></span>
+      </p>
+    </footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script>
+    feather.replace();
+  </script>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
